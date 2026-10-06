@@ -83,10 +83,10 @@
 }
 
 #downloadCol{
-    columns: 3;
-    padding-bottom: 30px;
-
+    display: flex;
+    padding-bottom: 30px;     /*removed column: 3 and replaced it with display:flex and justify content to sort it into 3 columns when at max size*/
     margin: 10px;
+    justify-content: center;
 }
 
 .column{
@@ -99,6 +99,7 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    flex: 1;
     height: 40vh;
 
     align-items: center;
@@ -109,15 +110,12 @@
 }
 
 #downloadLabel{
-    
     font-size: calc(4vw + 1vh);
     padding-bottom: 20px;
     
 }
 
 #downloadButton{
-
-
     background: #C0419D;
     color: white;
     padding: 10px;
@@ -151,4 +149,15 @@
     border-radius: 5%;
     background-size: cover;
     background-size: no-repeat;
+}
+
+@media screen and (max-width: 767px) { /*seperate styling based on if screen is smaller than 767 pixels. */
+    #downloadCol {
+        flex-direction: column;
+    }
+
+    .column {
+        margin-bottom: 20px;
+    }
+    
 }

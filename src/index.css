@@ -15,3 +15,26 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+*{
+  scrollbar-color: #d469f5 #e3b1f2 ;
+  scrollbar-width: auto;
+}
+
+::-webkit-scrollbar {       
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {   /*change color of actual scrollbar*/
+  background: #d469f5;
+  border-radius: 10px;
+ 
+}
+
+::-webkit-scrollbar-track {  /*change color of scrollbar track*/
+  background: #e3b1f2;
+}
+
+::-webkit-scrollbar-corner{ /*set color of corner to same color as track. Otherwise white square*/
+  background: #e3b1f2;
+}
